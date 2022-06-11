@@ -7,7 +7,9 @@ const passport = require("passport");
 const dotenv = require("dotenv");
 const path = require("path");
 
-//import routers
+dotenv.config();
+
+// import routers
 const indexRouter = require("./routes/index");
 const userRouter = require("./routes/user");
 const authRouter = require("./routes/auth");
@@ -15,13 +17,8 @@ const passportConfig = require("./passport");
 const { sequelize } = require("./models");
 const { getState } = require("./routes/middlewares");
 
-dotenv.config();
 const app = express();
 
-passportConfig(); //패스포트 설정
-
-app.set("views", "./views");
-app.set("view engine", "pug");
 sequelize
   .sync({ force: false })
   .then(() => {
@@ -32,6 +29,8 @@ sequelize
   });
 
 // 공통 middlewares
+app.set("views", "./views");
+app.set("view engine", "pug");
 app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
@@ -49,7 +48,7 @@ app.use(
   })
 );
 
-// passport middleware
+// passport 초기화 & 세션 미들웨어 실행
 app.use(passport.initialize());
 app.use(passport.session());
 
