@@ -1,29 +1,30 @@
 const { Sequelize } = require("sequelize");
 
+// user 테이블
 module.exports = class User extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
       {
         user_ID: {
             type: Sequelize.STRING(50),
-            allowNull: false,
+            allowNull: true,
             unique: true,
         },
         user_PW: {
             type: Sequelize.STRING(250),
-            allowNull: false,
+            allowNull: true,
         },
         user_name: {
             type: Sequelize.STRING(50),
-            allowNull: false,
+            allowNull: true,
         },
         user_birth: {
             type: Sequelize.DATE,
-            allowNull: false,
+            allowNull: true,
         },
         user_phoneNum: {
             type: Sequelize.STRING(250),
-            allowNull: false,
+            allowNull: true,
         },
       },
       {

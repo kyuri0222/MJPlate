@@ -5,11 +5,11 @@ USE Mjplate;
 -- User 테이블 정의
 CREATE TABLE `User` (
    `id`   INT   AUTO_INCREMENT PRIMARY KEY,
-   `user_ID`   VARCHAR(50)   NOT NULL,
-   `user_PW`   VARCHAR(250)   NOT NULL,
-   `user_name`   VARCHAR(50)   NOT NULL,
-   `user_birth`   DATE   NOT NULL,
-   `user_phoneNum`   VARCHAR(250)   NOT NULL
+   `user_ID`   VARCHAR(50)   NULL,
+   `user_PW`   VARCHAR(250)   NULL,
+   `user_name`   VARCHAR(50)   NULL,
+   `user_birth`   DATE   NULL,
+   `user_phoneNum`   VARCHAR(250)   NULL
 )DEFAULT CHARSET=utf8;
 DESC User;
 
