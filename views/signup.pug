@@ -3,26 +3,27 @@ extends layout
 //- 회원가입 페이지
 block content
   h1.text-center.mt-5 회원가입
-  form(id="signup" action="/auth/signup", method='post')
-    .form-group
-      label(for="inputID") 아이디
-      input#inputId.form-control(type="id" name="id" placeholder="아이디" required)
-      br
-      button#checkMyId.btn(type="button" style="float:right; background-color:#ff7f00") 중복확인
-      p#checkresult
-    .form-group
-      label(for="inputPassword") 패스워드
-      input#inputPassword.form-control(type="password" pattern=".{6,20}" name="password" placeholder="8~16자 영문,숫자를 사용해주세요." required)
-    .form-group
-      label(for="name") 이름
-      input#inputName.form-control(type="text" name="name" placeholder="이름" required)
-    .form-group
-      label(for="birth") 생일
-      input#inputBirth.form-control(type="date" name="birth" placeholder="생일"  required)
-    .form-group
-      label(for="phoneNum") 전화번호
-      input#inputPhoneNum.form-control(type="text" name="phoneNum" placeholder="전화번호"  required)
+  .container
+    form(id="signup" action="/auth/signup", method='post')
+      .form-group
+        label(for="inputID") 아이디
+        input#inputId.form-control(type="id" name="id" placeholder="아이디" required)
+        br
+        button#checkMyId.btn(type="button" style="float:right; background-color:#ff7f00") 중복확인
+        p#checkresult
+      .form-group
+        label(for="inputPassword") 패스워드
+        input#inputPassword.form-control(type="password" pattern=".{6,20}" name="password" placeholder="8~16자 영문,숫자를 사용해주세요." required)
+      .form-group
+        label(for="name") 이름
+        input#inputName.form-control(type="text" name="name" placeholder="이름" required)
+      .form-group
+        label(for="birth") 생일
+        input#inputBirth.form-control(type="date" name="birth" placeholder="생일"  required)
+      .form-group
+        label(for="phoneNum") 전화번호
+        input#inputPhoneNum.form-control(type="text" name="phoneNum" placeholder="전화번호"  required)
 
-    button.btn(type="submit" style= "background-color:#ff7f00") 회원가입
+      button.btn(type="submit" style= "background-color:#ff7f00") 회원가입
   script(src="https://unpkg.com/axios/dist/axios.min.js")
   script(src="/javascripts/signup.js")
