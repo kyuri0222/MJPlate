@@ -1,0 +1,24 @@
+extends layout
+
+//- 마이페이지
+block content
+  h1.text-center.mt-5 마이페이지
+  section.fdb-block.fp-active(data-block-type="contents" data-id="1" draggable="true")
+    .container
+        h3
+        strong 아이디
+          p.text-h3 #{current_user.user_ID}
+        br
+        h3
+        strong 이름
+          p.text-h3 #{current_user.user_name}
+        br
+        h3
+        strong 생일
+          p.text-h3 #{current_user.user_birth}
+        br
+        h3
+        strong 전화번호
+          p.text-h3 #{current_user.user_phoneNum}
+        br  
+        a.btn.btn-black.btn-empty(href='/updateMypage', style='float:right') 수정하기

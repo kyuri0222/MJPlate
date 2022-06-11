@@ -1,0 +1,25 @@
+extends layout
+
+//- 회원정보 수정 페이지
+block content
+    form(action='/updateMypage', method="POST")
+        h1.text-center.mt-5 마이페이지 수정
+        div(name="mypage")
+            .container
+                h3
+                strong 아이디
+                    p.text-h3 #{current_user.user_ID}
+                h3
+                strong 비밀번호
+                    input.form-control.text-h3(type="password", name="user_PW")
+                h3
+                strong 이름
+                    input.form-control.text-h3(type="text", name="name" value=`${current_user.user_name}`)
+                h3
+                strong 생일
+                    input.form-control.text-h3(type="text", name="birth" value=`${current_user.user_birth}`)
+                h3
+                strong 전화번호
+                    input.form-control.text-h3(type="text", name="phoneNum" value=`${current_user.user_phoneNum}`)
+                br
+                button.btn.btn-black.btn-empty(type="submit", style="float: right") 수정완료

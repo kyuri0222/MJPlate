@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+const app = require('../app');
+const path = require('path');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+const port = process.env.PORT || '3000';
+app.set('port', port);
+
+app.listen(app.get('port'), ()=>{
+  console.log(`localhost:${port}에서 listen...`)
+})

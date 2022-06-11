@@ -1,0 +1,12 @@
+nav.navbar.navbar-expand-lg.navbar-light(style="background-color: #ff7f00;")
+  img(src="../image/mju-logo.png")
+  a.navbar-brand.font-weight-bold(href="/" style="color:white;")  MJ PLATE
+  button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    if state == 'user'
+        block user
+            include ./nav_user
+    else
+        block unauthorized
+          include ./unauthorized

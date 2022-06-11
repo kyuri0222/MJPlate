@@ -1,0 +1,27 @@
+extends ../layout
+
+//- 맛집 등록 페이지
+block content
+  form(action="/user/registRestr", method="post")
+    .container
+      h1.text-center.mt-5 맛집 등록
+      .form-group
+        .row.align-items-center
+          .col.mt-4
+            h4 맛집 이름
+            input.form-control(type="text", placeholder="맛집 이름을 입력해주세요.", name="name")
+        .row.align-items-center.mt-4
+          .col
+            h4 음식점 종류
+            input.form-control(type="text", placeholder="맛집의 종류를 입력해주세요.", name="type")
+        .row.align-items-center.mt-4
+          .col
+            h4 위치
+            input.form-control(type="text", placeholder="맛집의 위치를 입력해주세요.", name="locate")
+        .row.align-items-center.mt-4
+          .col
+            h4 설명
+            input.form-control(type="text", placeholder="간단한 설명을 입력해주세요.", name="desc")
+        .row.justify-content-start.mt-4
+          .col(style="margin-bottom: 1em")
+            button.btn.btn-outline-dark(type="submit", style="float: right") 맛집 등록

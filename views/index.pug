@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    if state == 'user'
+        block restrList
+            include ./restrList
+    else
+        block content
+            include ./pic_view
