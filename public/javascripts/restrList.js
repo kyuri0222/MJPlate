@@ -1,3 +1,4 @@
+// 즐겨찾기 취소
 const stopBtn = document.querySelectorAll("button.stop");
 const restr_names = document.querySelectorAll(".restr_name");
 const types = document.querySelectorAll("td.type");
@@ -28,6 +29,7 @@ stopBtn.forEach((btn, index) => {
   });
 });
 
+// 즐겨찾기 추가
 const bookmarkBtn = document.querySelectorAll("button.bookmark");
 const non_restr_names = document.querySelectorAll("td.non_restr_name");
 const non_types = document.querySelectorAll("td.non_type");

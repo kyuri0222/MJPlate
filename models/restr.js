@@ -1,5 +1,6 @@
 const { Sequelize } = require("sequelize");
 
+// restr 테이블
 module.exports = class Restr extends Sequelize.Model {
   static init(sequelize) {
     return super.init(
